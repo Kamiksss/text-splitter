@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Splitter</title>
+  </head>
+  <body>
+    <label for="input">
+      <input type="text" id="input" /><br />
+      <button onclick="myFunction()">Do it</button><br />
+
+      <p id="output2"></p>
+
+      <script>
+        myFunction = () => {
+          let input = document.getElementById("input").value;
+          let loopOutput = "";
+          podzielone = input.match(/.{1,1999}/g);
+
+          const n = podzielone.length;
+
+          for (let i = 0; i < n; i++) {
+            loopOutput = loopOutput + podzielone[i] + "<br/>";
+          }
+          document.getElementById("output2").innerHTML = loopOutput;
+          console.log(loopOutput);
+        };
+
+        //        function myFunction() {
+        //         let input = document.getElementById("input").value;
+        //       window.alert(input);
+        //     document.getElementById("output").value = input;
+        //}
+      </script>
+    </label>
+  </body>
+</html>
